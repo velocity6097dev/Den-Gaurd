@@ -9,6 +9,9 @@ module.exports = {
     MAINTAINER_ID: '812347860128497694',
     COUNTING_CHANNEL_ID: '1529934537264599280',
 
+    LOG_CHANNEL_ID: '1529953900130472047',   // every command use gets logged here
+    ERROR_CHANNEL_ID: '1529951588729225447',   // crashes / uncaught errors get posted here
+
     INTERVAL_MS: 3600000, // hourly vitals
     TARGET_DATE: new Date('2026-11-19T00:00:00Z').getTime(),
 
