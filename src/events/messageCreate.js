@@ -33,4 +33,9 @@ module.exports = async function messageCreate(message) {
         await logCommand(message.client, message, '!analytics', { allowed: true });
         return message.channel.send({ embeds: [buildAnalyticsEmbed(message.client)] });
     }
+
+    if (content === '!crashtest') {
+    if (message.author.id !== MAINTAINER_ID) return;
+    throw new Error('Test error — verifying crashLogger.js works.');
+}
 };
