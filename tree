@@ -1,0 +1,23 @@
+discord-utility-bot/
+├── .env.example
+├── .gitignore
+├── package.json
+├── start.bat
+├── start.sh
+├── data/
+│   └── .gitkeep
+└── src/
+    ├── index.js
+    ├── config.js
+    ├── events/
+    │   ├── ready.js
+    │   └── messageCreate.js
+    ├── services/
+    │   ├── vitals.js
+    │   ├── countdown.js
+    │   └── counting.js
+    ├── state/
+    │   ├── countdownState.js
+    │   └── countState.js
+    └── utils/
+        └── format.js
