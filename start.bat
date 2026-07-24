@@ -1,18 +1,23 @@
 @echo off
-cd /d %~dp0
+title Den-Guard Bot
 
-if not exist node_modules (
-    echo Installing dependencies, this only happens once...
-    call npm install
+echo =========================================
+echo          Den-Guard Bot Startup
+echo =========================================
+echo.
+
+echo Do you want to deploy/sync slash commands to Discord? (y/n)
+set /p deployChoice="Choice: "
+
+if /i "%deployChoice%"=="y" (
+    echo.
+    echo 🔄 Deploying commands...
+    node src/utils/deployCommands.js
+    echo.
 )
 
-if not exist .env (
-    echo No .env file found. Copy .env.example to .env and add your token first.
-    pause
-    exit /b 1
-)
+echo 🚀 Starting Den-Guard...
+node src/index.js
 
-echo Starting bot...
-node src\index.js
-
+echo.
 pause

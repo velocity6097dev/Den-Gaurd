@@ -11,6 +11,7 @@ module.exports = {
 
     LOG_CHANNEL_ID: '1529953900130472047',   // every command use gets logged here
     ERROR_CHANNEL_ID: '1529951588729225447',   // crashes / uncaught errors get posted here
+    MOD_LOG_CHANNEL_ID: '1530118460695121980', // moderation actions get logged here
 
     INTERVAL_MS: 3600000, // hourly vitals
     TARGET_DATE: new Date('2026-11-19T00:00:00Z').getTime(),
